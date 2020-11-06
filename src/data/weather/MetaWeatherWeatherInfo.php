@@ -9,7 +9,7 @@ use Codium\CleanCode\data\WeatherRepository;
 class MetaWeatherWeatherInfo implements WeatherInfo
 {
 
-    private const META_WEATHER_SEARCH_HTTP = "https://www.metaweather.com/api/location/search/?query=";
+    private const META_WEATHER_SEARCH_HTTP = "https://www.metaweather.com/api/location/";
 
     function getWeatherInfo(string $locationIdentifier)
     {

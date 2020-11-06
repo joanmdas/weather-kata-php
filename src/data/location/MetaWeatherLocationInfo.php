@@ -8,7 +8,7 @@ use Codium\CleanCode\data\WeatherRepository;
 
 class MetaWeatherLocationInfo implements LocationInfo
 {
-    private const META_WEATHER_CITY_LOCATION_URL = "https://www.metaweather.com/api/location/";
+    private const META_WEATHER_CITY_LOCATION_URL = "https://www.metaweather.com/api/location/search/?query=";
 
     function getCityIdentifier(string $cityName)
     {
