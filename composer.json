@@ -2,9 +2,10 @@
     "name": "codium/weather-kata",
     "description": "Material for the Clean Code training",
     "require": {
-        "php": "^7",
+        "php": "^7.1",
         "guzzlehttp/guzzle": "^6.3",
-        "phpmetrics/phpmetrics": "^2.3"
+        "phpmetrics/phpmetrics": "^2.3",
+        "ext-json": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0"

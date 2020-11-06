@@ -2,16 +2,16 @@
 
 namespace Tests\Codium\CleanCode;
 
-use Codium\CleanCode\Forecast;
+use Codium\CleanCode\WeatherForecast;
 use PHPUnit\Framework\TestCase;
 
-class WeatherTest extends TestCase
+class WeatherForecastTest extends TestCase
 {
     // https://www.metaweather.com/api/location/766273/
     /** @test */
     public function find_the_weather_of_today()
     {
-        $forecast = new Forecast();
+        $forecast = new WeatherForecast();
         $city = "Madrid";
 
         $prediction = $forecast->predict($city);
@@ -23,7 +23,7 @@ class WeatherTest extends TestCase
     /** @test */
     public function find_the_weather_of_any_day()
     {
-        $forecast = new Forecast();
+        $forecast = new WeatherForecast();
         $city = "Madrid";
 
         $prediction = $forecast->predict($city, new \DateTime('+2 days'));
@@ -35,7 +35,7 @@ class WeatherTest extends TestCase
     /** @test */
     public function find_the_wind_of_any_day()
     {
-        $forecast = new Forecast();
+        $forecast = new WeatherForecast();
         $city = "Madrid";
 
         $prediction = $forecast->predict($city, null, true);
@@ -47,7 +47,7 @@ class WeatherTest extends TestCase
     /** @test */
     public function change_the_city_to_woeid()
     {
-        $forecast = new Forecast();
+        $forecast = new WeatherForecast();
         $city = "Madrid";
 
         $forecast->predict($city, null, true);
@@ -58,7 +58,7 @@ class WeatherTest extends TestCase
     /** @test */
     public function there_is_no_prediction_for_more_than_5_days()
     {
-        $forecast = new Forecast();
+        $forecast = new WeatherForecast();
         $city = "Madrid";
 
         $prediction = $forecast->predict($city, new \DateTime('+6 days'));
